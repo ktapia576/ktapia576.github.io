@@ -1,3 +1,4 @@
-.text {
-  color: red;
+html {
+  font-size: 15px; /* px means 'pixels': the base font size is now 12 pixels high  */
+  font-family: 'Ubuntu', sans-serif; /*this should be the rest of the output you got from Google fonts */
 }
