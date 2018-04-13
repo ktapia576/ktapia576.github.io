@@ -37,6 +37,17 @@ p, li {
 }
 
 img {
-    display: block;
+    display: block;   /*Convert to 'box' so we can add margin to it */
     margin: 0 auto;   /*First value sets top & bottom to 0, Second sets left and right to auto. Auto center the image. */
+}
+
+button {
+  display: block; /*Convert to 'box' so we can add margin to it */
+  margin: 1px 50px 0px auto;
+  padding: 4px 4px;
+  border: none;
+  font-size: 18px;
+  color: white; /*Color of text */
+  background-color: #4fb5ff;  /*Color of button or background */
+  cursor: pointer; /*changes mouse when it hovers over it */
 }
