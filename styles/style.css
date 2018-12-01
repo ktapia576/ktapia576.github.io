@@ -1,53 +1,110 @@
-html {
-  font-size: 15px; /* px means 'pixels': the base font size is now 15 pixels high  */
-  font-family: 'Ubuntu', sans-serif; /*this should be the rest of the output you got from Google fonts */
-  background-color: #a9abad; /*Sets Background-color to set value.  */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
 body {
-  width: 600px; /*This forces the body to always be 600 pixels wide. */
-  margin: 0px auto 40px auto; /*First value sets top to 0, second value sets right margin to auto, third sets bottom to 40 pixels high, fourth sets left to auto.*/
-                  /*Auto is a special value that divides the available horizontal space evenly between left and right*/
-  background-color: #f4f4f4; /*Sets the background-color to a value. */
-  padding: 0px 20px 20px 20px; /*Four values for padding in pixels (top, right, bottom, left in that order).*/
-  border: 5px solid black;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: normal;
 }
 
-#art {
-  color: blue;  /*change color of elements with id='art' */
+header {
+  width: 100%;
+  height: 10vh;
+  background-size: cover;
 }
 
-.text{
-  color:green;  /*change color of elements with class='text' */
+.content {
+  width: 94%;
+  margin: 4em auto;
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
 }
 
-h1 {
-  font-size: 60px;  /*Will change only the h1 elements */
-  text-align: center; /*Will center text */
+.logo {
+  line-height: 60px;
+  position: fixed;
+  float: left;
+  margin: 16px 46px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  line-height: 60px;
+  /* opacity: 0.8; this also affects contents */
+}
+
+nav ul {
+  line-height: 60px;
+  list-style: none;
+  background: rgba(2, 49, 120, 0.8);
+  overflow: hidden;
+  color: #fff;
+  padding: 0;
+  text-align: right;
   margin: 0;
-  padding: 20px 0; /*Will set top and bottom to 20px, Will set left and right padding to 0px */
-  color: #4fb5ff;
-  text-shadow: 2px 2px 2px grey;  /*First value stes horizontal offset, Second sets Vertical, Third sets amount of blur, Fourth sets color. (Negative numbers go opposite of positive) */
+  padding-right: 40px;
+  transition: 1s;
 }
 
-p, li {
-  font-size: 18px;      /*This will apply to all p and li elements */
-  line-height: 2;     /*How many new lines it will print*/
-  letter-spacing: 1px;    /*Spacing in between letters*/
+/*Add CSS style when scrolling effect takes place in jquery*/
+nav.black ul {
+  background: rgba(2, 49, 120, 0.8); /*rgba(r,g,b,transparency)*/
 }
 
-img {
-    display: block;   /*Convert to 'box' so we can add margin to it */
-    margin: 0 auto;   /*First value sets top & bottom to 0, Second sets left and right to auto. Auto center the image. */
+nav ul li {
+  display: inline-block;
+  padding: 16px 40px;
 }
 
-button {
-  display: block; /*Convert to 'box' so we can add margin to it */
-  margin: 1px 50px 0px auto;
-  padding: 4px 4px;
-  border: none;
-  font-size: 18px;
-  color: white; /*Color of text */
-  background-color: #4fb5ff;  /*Color of button or background */
-  cursor: pointer; /*changes mouse when it hovers over it */
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+}
+
+.menu-icon {
+  line-height: 60px;
+  width: 100%;
+  background: rgba(2, 49, 120, 0.8);
+  text-align: right;
+  box-sizing: border-box;
+  padding: 15px 24px;
+  cursor: pointer;
+  color: #fff;
+  display: none;  /*do not display div for now */
+}
+
+@media(max-width: 786px) {  /*change properties when browser window is 786px wide or less */
+  .logo {
+    position: fixed;
+    top: 0;
+    margin-top: 16px;
+  }
+  nav ul {
+    max-height: 0px;
+    background: rgba(2, 49, 120, 1);
+  }
+  nav.black ul {
+    background: rgba(2, 49, 120, 1);
+  }
+  .showing {
+    max-height: 34em;
+  }
+  nav ul li {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 24px;
+    text-align: center;
+  }
+  .menu-icon {
+    display: block; /*display div after jquery runs*/
+  }
 }
