@@ -1,35 +1,50 @@
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8" />
-		<title> Welcome! </title>
 
-		<link href='styles/style.css' rel='stylesheet' type='text/css'>
-		<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
-	</head>
+<head>
+	<meta charset="utf-8">
 
-	<body>
-		<h1> Welcome to My Website! </h1>
+	<title>Home</title>
 
-		<img src='images/art.jpg' width='500' height='300' alt='"Yellow-Red-Blue", by Wassily Kandinsky.'>
-		<button onclick='changeImage()'>Change Image</button>
+	<link href='styles/style.css' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 
-		<p id='art'><strong>This is art!</strong></p> <!-- <strong> element will make the text BOLD. -->
+	<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-		<p class='text'>This art was created by Wassily Kandinsky. It looks very artistic and pretty. This is the
-			<a href='http://www.wassily-kandinsky.org/Yellow-Red-Blue.jsp' target="_blank">source</a> and it was created in 1925!  </p>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-		<p>Wassily Kandinsky also painted other abstract art, such as:
-				<ul>																									<!-- target="_blank" opens new tab when link clicked on. You can set a tab name also instead -->
-						<li>"Several Circles", <a href='https://i0.wp.com/www.guggenheim.org/wp-content/uploads/1926/01/41.283_ph_web.jpg?w=870' target="_blank">image</a></li>
-						<li>"Composition X", <a href='http://www.wassily-kandinsky.org/images/gallery/Composition-X.jpg' target="_blank">image</a></li>
-						<li>"On White II", <a href='http://jfaccento.quicm.net/blog/wp-content/uploads/2010/03/Jonathan-Faccento-502-Kandinsky1.jpg' target="_blank">image </a></li>
-						<li>"Black and Violet", <a href='http://www.wassily-kandinsky.org/images/gallery/Black-and-Violet.jpg' target="_blank">image </a></li>
-				</ul>
+	<!-- NavBar Script functionality -->
+	<script src="scripts/nav.js"></script>
+</head>
 
-		</p>
-		<script src="scripts/main.js"></script>
-	</body>
+<body>
+	<div class="wrapper">
+		<header>
+			<nav>
+				<div class="menu-icon">
+					<i class="fa fa-bars fa-2x"></i>
+				</div>
 
+				<div class="logo">
+					Kevin Tapia
+				</div>
 
+				<div class="menu">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="files/resume.pdf" target="_blank">Resume</a></li>
+						<li><a href="https://github.com/ktapia576" target="_blank">My Github!</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<div class="content">
+			<p>
+				Hello! I am Kevin, and I enjoy coding! </br> This Website is in progress! However, you can check my Resume and Github above!
+			</p>
+		</div>
+	</div>
+</body>
 
 </html>
