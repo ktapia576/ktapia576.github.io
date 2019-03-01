@@ -82,6 +82,10 @@ nav ul li a {
   display: none;  /*do not display div for now */
 }
 
+.mobile {
+  display: none;  /*do not display div on mobile*/
+}
+
 @media(max-width: 786px) {  /*change properties when browser window is 786px wide or less */
   .logo {
     position: fixed;
@@ -107,4 +111,13 @@ nav ul li a {
   .menu-icon {
     display: block; /*display div after jquery runs*/
   }
+
+  .desktop {
+    display: none;  /*do not display div on mobile*/
+  }
+
+  .mobile {
+    display: block;  /*do not display div on mobile*/
+  }
+
 }
